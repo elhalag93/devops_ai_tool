@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${pageTitle}">Automation Platform</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 th:text="${pageTitle}">Automation Platform</h1>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/}">Dashboard</a></li>
+                    <li><a th:href="@{/chat}">Chat Interface</a></li>
+                    <li><a th:href="@{/tasks}">Tasks</a></li>
+                    <li><a th:href="@{/configuration}">Configuration</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="dashboard" class="dashboard-container">
+                <div th:each="task : ${tasks}" class="task-card">
+                    <h3 th:text="${'Task: ' + task.name}">Task Name</h3>
+                    <p th:text="${'Status: ' + task.status}">Status</p>
+                    <p th:text="${'Created: ' + #temporals.format(task.createdAt, 'dd-MM-yyyy HH:mm')}">Created Date</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script th:src="@{/js/main.js}"></script>
+</body>
+</html> 

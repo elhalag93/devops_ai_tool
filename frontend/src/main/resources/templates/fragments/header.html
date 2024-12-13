@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+    <header th:fragment="header">
+        <h1 th:text="${pageTitle}">Automation Platform</h1>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Dashboard</a></li>
+                <li><a th:href="@{/chat}">Chat Interface</a></li>
+                <li><a th:href="@{/tasks}">Tasks</a></li>
+                <li><a th:href="@{/configuration}">Configuration</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html> 

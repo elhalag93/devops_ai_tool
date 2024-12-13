@@ -1,0 +1,26 @@
+automation-platform/
+├── frontend/                 # Java JSP Frontend
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── webapp/
+│   │   │   │   ├── WEB-INF/
+│   │   │   │   │   └── web.xml
+│   │   │   │   ├── views/
+│   │   │   │   ├── static/
+│   │   │   │   └── index.jsp
+│   │   │   └── java/
+│   │   └── test/
+│   └── pom.xml
+├── backend/
+│   ├── java-api/           # Java REST API
+│   │   ├── src/
+│   │   │   └── main/
+│   │   └── pom.xml
+│   └── python/            # Python Services
+│       ├── llm/
+│       ├── orchestrator/
+│       └── requirements.txt
+└── docker/
+    ├── frontend/
+    ├── java-api/
+    └── python/ 
